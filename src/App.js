@@ -8,7 +8,9 @@ import Upload from './components/Upload';
 function App() {
   return (
     <Container>
-      <Content>Teste galerinha</Content>
+      <Content>
+        <Upload />
+      </Content>
       <GlobalStyle />
     </Container>
   );
