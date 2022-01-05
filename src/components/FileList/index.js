@@ -12,7 +12,12 @@ const FileList = ({ files }) => (
                     <Preview src={uploadedFile.preview} />
                     <div>
                         <strong>{uploadedFile.name}</strong>
-                        <span>{uploadedFile.readableSize}{" "} <button onClick={() => {}}>Excluir</button></span>
+                        <span>
+                            {uploadedFile.readableSize}{" "}
+                            { !!uploadedFile.url && (
+                                <button onClick={() => {}}>Excluir</button>
+                            ) }
+                        </span>
                     </div>
                 </FileInfo>
 
@@ -30,7 +35,7 @@ const FileList = ({ files }) => (
 
                     {uploadedFile.url && (
                         <a
-                            href="#"
+                            href={uploadedFile.url}
                             target="_blank"
                             rel="noopener noreferrer"
                         >

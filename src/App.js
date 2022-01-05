@@ -54,8 +54,18 @@ class App extends Component {
           progress: progress,
         })
       }
+    }).then(response => {
+      this.updateFile(uploadedFile.id, {
+        uploaded: true,
+        id: response.data._id,
+        url: response.data.url,
+      });
+    }).catch(() => {
+      this.updateFile(uploadedFile.id, {
+        error: true
+      });
     });
-  }
+  };
 
   render() {
     const { uploadedFiles } = this.state;
