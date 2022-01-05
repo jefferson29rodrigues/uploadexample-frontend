@@ -32,7 +32,7 @@ class App extends Component {
       uploadedFiles: this.state.uploadedFiles.concat(uploadedFiles)
     });
 
-    uploadFiles.forEach(this.processUpload)
+    uploadedFiles.forEach(this.processUpload)
   };
 
   updateFile = (id, data) => {
