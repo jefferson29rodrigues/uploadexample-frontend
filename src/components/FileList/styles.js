@@ -7,7 +7,7 @@ export const Container = styled.ul`
         display: flex;
         justify-content: space-between;
         align-items: center;
-        color: '#444';
+        color: #444;
 
         & + li {
             margin-top: 15px;
@@ -25,13 +25,13 @@ export const FileInfo = styled.div`
 
         span {
             font-size: 12px;
-            color: '#999';
+            color: #999;
             margin-top: 5px;
 
             button {
                 border: 0;
                 background: transparent;
-                color: '#e57878';
+                color: #e57878;
                 margin-left: 5px;
                 cursor: pointer;
             }
